@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = prompt("nhap n");
+      function checkSnt(n) {
+        let flag = true;
+        if (n < 2) {
+          flag = false;
+        } else {
+          for (let i = 2; i < n; i++) {
+            if (n % i == 0) {
+              flag = false;
+              break;
+            }
+          }
+        }
+        // if (flag == true) {
+        //   document.write(n + "la snt");
+        // } else {
+        //   document.write(n + "khong phai snt");S
+        // }
+        return flag;
+      }
+
+      function hienSNT(n){
+          let count = 0; // dem so nguyen to;
+          for (let i = 2; count < n; i++){
+             if(checkSnt(i)){
+              document.write(i);
+              count++;
+             }
+          }
+      }
+      hienSNT(n);
+    </script>
+  </body>
+</html>
+
